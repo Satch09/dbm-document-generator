@@ -1,0 +1,5 @@
+{
+  "python.pythonPath": "xlenv/bin/python",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true
+}
