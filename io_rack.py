@@ -6,6 +6,9 @@ class IO_Rack:
             print('Too many cards for the rack')
         else:
             counter = 0
+            self.node_number = 1
+            self.rack_number = 1
+            self.slot_number = counter
             for card in cards:
                 self.rack[counter] = card
                 counter = counter + 1

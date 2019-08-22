@@ -13,7 +13,7 @@ class IO_Card:
         RTD: Resistive Temperature Differential
     """
 
-    def __init__(self, card_part_number, card_io_type):
+    def __init__(self, card_part_number, card_io_type, instruments):
         cards = [
             {'card_name': '1756-IB32', 'io_count': 32, 'io_type': 'DIV'},
             {'card_name': '1756-OB32', 'io_count': 32, 'io_type': 'DOV'},
@@ -32,6 +32,7 @@ class IO_Card:
                     for io in card['io_type']:
                         if io == card_io_type:
                             self.io_type = io
+                    populate_card(instruments)
                 else:
                     print('error in assigning io to card')
 
@@ -44,7 +45,7 @@ class IO_Card:
         return self.io_assignments
 
     def __str__(self):
-        return self.part_number
+        return self.card_io_type
 
     if __name__ == "__main__":
         pass
